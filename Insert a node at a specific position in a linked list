@@ -1,0 +1,19 @@
+SinglyLinkedListNode* insertNodeAtPosition(SinglyLinkedListNode* head, int data, int position) {
+auto cad = new SinglyLinkedListNode(data);  
+SinglyLinkedListNode*temp=head; 
+   if(head == NULL){  
+     head = cad;  
+   }else{    
+    if(position==0){
+        cad->next=temp;
+        head=cad;
+    }else{
+        for(int i=1;i<position;i++){
+            temp=temp->next;
+        }
+        cad->next=temp->next;
+        temp->next=cad;
+    } 
+   }  
+     return head;
+}
