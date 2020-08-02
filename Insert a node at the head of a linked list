@@ -1,0 +1,11 @@
+SinglyLinkedListNode* insertNodeAtHead(SinglyLinkedListNode*list, int data) {
+auto cad = new SinglyLinkedListNode(data);
+    if ( list == nullptr ) {
+        list = cad;
+        return list;
+    }
+    else {
+        cad->next = list;
+        return cad;
+    }
+}
