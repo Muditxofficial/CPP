@@ -1,0 +1,11 @@
+bool has_cycle(SinglyLinkedListNode* head) {
+ SinglyLinkedListNode*q,*p;
+ q=p=head;
+ do{
+     p=p->next;
+     q=q->next;
+     q=q?q->next:q;
+ }while(p&&q && p!=q);
+ return p==q?1:0;
+
+}
