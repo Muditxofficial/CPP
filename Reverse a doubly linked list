@@ -1,0 +1,15 @@
+DoublyLinkedListNode* reverse(DoublyLinkedListNode* head) {
+    if(head==NULL){
+        return head;
+    }
+    else if(head->next==NULL){
+        head->next=head->prev;
+        head->prev=NULL;
+        return head;
+    }
+    DoublyLinkedListNode*prevPtr=head->prev;
+    DoublyLinkedListNode*nextPtr=head->next;
+    head->next=prevPtr;
+    head->prev=nextPtr;
+    return reverse(nextPtr);
+}
