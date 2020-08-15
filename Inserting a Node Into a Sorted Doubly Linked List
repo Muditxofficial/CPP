@@ -1,0 +1,17 @@
+DoublyLinkedListNode* sortedInsert(DoublyLinkedListNode* head, int data) {
+ auto cad = new DoublyLinkedListNode(data);
+if(head==NULL){
+    return cad;
+}
+if(head->data<=data){
+    head->next = sortedInsert(head->next, data);
+    head->next->prev = head; 
+}else{
+ cad->next=head;
+ cad->prev=head->prev;
+ head->prev=cad;
+ head=cad;
+}
+return head;
+
+}
