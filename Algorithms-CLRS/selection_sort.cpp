@@ -1,12 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void swapping(int &a, int &b) {         
-   int temp;
-   temp = a;
-   a = b;
-   b = temp;
-}
 
 void selection_sort(vector<int> &vec){
     int n = vec.size();
