@@ -10,10 +10,10 @@ struct Node {
     Node* p;
     int d;
     int f;
-
+//constructor
     Node (int x) : key(x) {}
 };
-
+//create an empty list
 list<Node*> tSorted;
 
 struct Graph {
@@ -80,7 +80,7 @@ int main(){
     G.addEdge(2,3);
     G.addEdge(3,1);
 
-    topologicalSort(6);
+    topologicalSort(G);
     destroy();
     return 0;
 }
